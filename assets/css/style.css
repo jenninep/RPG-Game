@@ -27,7 +27,7 @@ p{
 }
 
 
-#wins{
+.wins{
 	color: #e700e8;
 	font-size: 19px;
 	font-family: 'Roboto', sans-serif;
@@ -38,7 +38,7 @@ p{
      border-width: 7px;
 }
 
-#losses{
+.losses{
 	color: #e700e8;
 	font-size: 19px;
 	font-family: 'Roboto', sans-serif;

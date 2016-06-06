@@ -1,7 +1,8 @@
 
+
 var randomNumber = $(".numberbox");
-var winsId = $("#wins");
-var lossesId = $("#losses");
+var winsClass = $(".wins");
+var lossesClass = $(".losses");
 var totalscore = $("#totalscore");
 var total = 0;
 var wins = 0;
@@ -10,11 +11,24 @@ var losses = 0;
 var audioElement = document.createElement('audio');
  audioElement.setAttribute('src', 'assets/images/buttonSound.mp3');
 
+$(document).ready(function(){
  $("#green, #blue, #yellow, #purple").on("click", function(){
   audioElement.play();
 });
 
 
+var checkwin = function (){
+	if (randomNumber === totalscore) {
+		winsClass = wins + 1;	
+		alert('You won!!!!');
+		resetGame();
+	
+	}else if(randomNumber > totalscore){
+		lossesClass = losses + 1;
+		alert('You lost!');
+		resetGame();
+	}
+	};
 
 
 var generateNum = function (min, max) {
@@ -66,25 +80,9 @@ $("#yellow").on("click", function(){
 });
 
 
- 
-
-var checkwin = function (){
-	if (numberGenerated === totalscore) {
-		winsId = wins + 1;	
-		alert('You won!!!!');
-		resetGame();
-	
-	}else if(numberGenerated > totalscore){
-		lossesId = losses + 1;
-		alert('You lost!');
-		resetGame();
-	}else{
-		
-	}
-	};
 
 function resetGame() {
     window.location.reload()
 };
 
-
+});
