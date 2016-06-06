@@ -5,8 +5,8 @@ var winsClass = $(".wins");
 var lossesClass = $(".losses");
 var totalscore = $("#totalscore");
 var total = 0;
-var wins = 1;
-var losses = 1;
+var wins = " ";
+var losses = " ";
 
 var audioElement = document.createElement('audio');
  audioElement.setAttribute('src', 'assets/images/buttonSound.mp3');
@@ -19,14 +19,12 @@ $(document).ready(function(){
 
 var checkwin = function (){
 	if (numberGenerated === total) {
-		winsClass.html(wins);
-		wins++;	
+		$(winsClass).html("Wins: " + wins + 1);	
 		alert('You won!!!!');
 		resetGame();
 	
 	}else if(total > numberGenerated){
-		lossesClass.html('losses' === losses);
-		losses++;
+		$(lossesClass).html("Losses: " + losses + 1);
 		alert('You lost!');
 		resetGame();
 		}
