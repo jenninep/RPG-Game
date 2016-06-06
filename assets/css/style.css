@@ -3,13 +3,15 @@ html {
 	background: url('background.jpg') no-repeat center center;
 	background-size: cover;
 }
-
+button {
+	margin: 20px;
+}
 body{
 	background: none;
 }
 
 .logo{
-	max-width: 100%;
+	max-width: 85%;
 }
 
 img{
@@ -18,4 +20,66 @@ img{
 
 p{
 	color: white;
+	margin: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	font-size: 14px;
 }
+
+
+#wins{
+	color: #e700e8;
+	font-size: 19px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	background-color: white;
+	padding: 7px;
+	border-style: double;
+     border-width: 7px;
+}
+
+#losses{
+	color: #e700e8;
+	font-size: 19px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	background-color: white;
+	padding: 7px;
+	border-style: double;
+    border-width: 7px;
+    margin-bottom: 30px;
+
+}
+
+#totalscore{
+	color: #e700e8;
+	font-size: 19px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	background-color: white;
+	padding: 7px;
+	border-style: double;
+    border-width: 7px;
+}
+
+}
+
+
+.crystals{
+	text-align: center;
+	margin-top: 30px;
+
+}
+
+
+.numberbox{
+	
+	padding: 25px;
+    margin-top: 10px;
+    color: #fff;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+
+	}
+

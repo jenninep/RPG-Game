@@ -5,27 +5,54 @@
 	
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	
 </head>
 <body>
 	<div class="container text-center">
-		<img class="logo text-center" src="assets/images/logo.png" alt="Crystal Collector logo">
+		<div class="row">
+			<div class="col-lg-12">
+				<img class="logo text-center" src="assets/images/logo.png" alt="Crystal Collector logo">
 
-		<p> You will be given a random number at the strat of the game.<br>
-		By clicking on any four of the crystals below you wil add a specific aount of points to your total score.
-			
-		</p>
-
-		<div class="wrapper">
-			<img src="assets/images/diamond.png" alt="diamond jewel" width="90" height="90">
-			<img src="assets/images/blue jewel.png" alt="diamond jewel" width="90" height="90">
-			<img src="assets/images/purple.png" alt="diamond jewel" width="90" height="90">
-			<img src="assets/images/yellow.png" alt="diamond jewel" width="90" height="90">
+				<p> You will be given a random number at the start of the game.<br>
+				By clicking on any four of the crystals below you wil add a specific aount of points to your total score.
+				</p>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-xs-4">
+				<div id="totalscore">Total Score: </div>
+			</div>
+			<div class="col-xs-4">
+				<div id="wins">Wins: </div>
+			</div>
+			<div class="col-xs-4">
+				<div id="losses">Losses: </div>
+			</div>
+		</div>
+				
+				<div class="crystals">
+					<button id="green"><img src="assets/images/diamond.png" alt="green jewel" width="90" height="90"></button>
+					<button id="blue"><img src="assets/images/blue jewel.png" alt="blue jewel" width="90" height="90"></button>
+					<button id="purple"><img src="assets/images/purple.png" alt="purple jewel" width="90" height="90"></button>
+					<button id="yellow"><img src="assets/images/yellow.png" alt="yellow jewel" width="90" height="90"></button>
+				</div>
+				
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="numberbox">
+						<div id = "randomNumber text-center" class="col-lg-6">
+							<div>Match This Number:</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

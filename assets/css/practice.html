@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Bootstrap minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<title>Crystals Collector</title>
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class = "panel panel-default">
+				<div class = "panel-body">
+					<h2>Crystals Collector!</h2>
+				</div>
+		
+		<div id = "instructions" class="panel-footer">
+					<h3><strong>Instructions:</strong></h3>
+					<p>You will be given a random number at the start of the game. <br><br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>You win the game by matching your total score to the random number.<br><br> You lose the game if your total score goes above the random number. <br><br>The value of each crystal is hidden from you until you click on it. <br><br>Each time the game starts, the values of each crystal will change and a new target number will be generated.</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="numberbox">
+<div class="row">
+			<div id = "randomNumber" class="col-md-6"></div>
+				<div class="col-md-6">
+				<div id="wins">Wins: </div>
+				<div id="losses">Losses: </div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "images"> 
+		<button id = "crystal1"><img src = "assets/images/crystal1.jpg" width = 130 height = 120></button>
+		<button id = "crystal2"><img src = "assets/images/crystal2.jpg" width = 130 height = 120></button>
+		<button id = "crystal3"><img src = "assets/images/crystal3.jpg" width = 130 height = 120></button>
+		<button id = "crystal4"><img src = "assets/images/crystal4.png" width = 130 height = 120></button>
+		</div>
+
+	<div id = "totalscore" class="row"></div>
+</div>
+<script src="assets/javascript/jquery-2.2.3.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
