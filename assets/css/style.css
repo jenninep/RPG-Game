@@ -26,6 +26,14 @@ p{
 	font-size: 14px;
 }
 
+.message{
+	color: #fff;
+    text-shadow: -2px 0 #e700e8, 0 2px #e700e8, 2px 0 #e700e8, 0 -2px #e700e8;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	
+}
 
 .wins{
 	color: #e700e8;
@@ -35,7 +43,7 @@ p{
 	background-color: white;
 	padding: 7px;
 	border-style: double;
-     border-width: 7px;
+    border-width: 7px;
 }
 
 .losses{
@@ -80,6 +88,7 @@ p{
 	font-size: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bolder;
+	letter-spacing: .8px;
 
 	}
 

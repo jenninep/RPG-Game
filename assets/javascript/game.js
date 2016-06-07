@@ -5,8 +5,8 @@ var winsClass = $(".wins");
 var lossesClass = $(".losses");
 var totalscore = $("#totalscore");
 var total = 0;
-var wins = " ";
-var losses = " ";
+var wins = 0;
+var losses = 0;
 
 var audioElement = document.createElement('audio');
  audioElement.setAttribute('src', 'assets/images/buttonSound.mp3');
@@ -16,16 +16,34 @@ $(document).ready(function(){
   audioElement.play();
 });
 
+var resetGame = function() {
+greenNum = generateNum(1,12);
+purpleNum = generateNum(1,12);
+blueNum = generateNum(1,12);
+yellowNum = generateNum(1,12);
+//$(".message").empty();
+console.log('yup');
+};
 
 var checkwin = function (){
 	if (numberGenerated === total) {
-		$(winsClass).html("Wins: " + wins + 1);	
-		alert('You won!!!!');
+		$(winsClass).html("Wins: " + wins);
+		wins++;	
+		numberGenerated = generateNum(19,120);
+		$(randomNumber).html("Match This Number:  "  + numberGenerated);
+		total = 0;
+		$(totalscore).html("Your total score is: " + total)
+		$(".message").html("You Won!");
 		resetGame();
 	
 	}else if(total > numberGenerated){
-		$(lossesClass).html("Losses: " + losses + 1);
-		alert('You lost!');
+		$(lossesClass).html("Losses: " + losses);
+		losses++;
+		numberGenerated = generateNum(19,120);
+		$(randomNumber).html("Match This Number:  "  + numberGenerated);
+		total = 0;
+		$(totalscore).html("Your total score is: " + total)
+		$(".message").html("You Lost!");
 		resetGame();
 		}
 	};
@@ -42,7 +60,8 @@ var purpleNum = generateNum(1, 12);
 var blueNum = generateNum(1, 12);
 var yellowNum = generateNum(1, 12);
 
-randomNumber.append(numberGenerated);
+randomNumber.append("Match This Number:  "  + numberGenerated);
+
 
 
 
@@ -56,6 +75,7 @@ $("#green").on("click", function(){
  	 console.log('you did it');
  	 setScore();
 	 checkwin();
+
 });
 
 $("#purple").on("click", function(){
@@ -81,8 +101,8 @@ $("#yellow").on("click", function(){
 
 
 
-function resetGame() {
-    window.location.reload()
-};
+//function resetGame() {
+    //window.location.reload()
+//};
 
 });
